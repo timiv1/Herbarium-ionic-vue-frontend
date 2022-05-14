@@ -1,27 +1,35 @@
 <template>
-  <div class="ion-text-center">
-    <ion-card>
-      <img
-        src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGxhbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"
-      />
-    </ion-card>
-    <span style="margin-left: 10px; margin-right: 10px"
+  <div class="ion-text-center" style="margin-left: 10px; margin-right: 10px">
+    <img :src="url" />
+    <span class="text-collection-components" style="display: none"
       >{{ name }} {{ date }}</span
     >
   </div>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
-import { IonCard } from "@ionic/vue";
+import {} from "@ionic/vue";
 
 export default defineComponent({
   name: "PlantCard",
-  components: {
-    IonCard,
-  },
+  components: {},
   props: {
     name: { type: String, required: true },
     date: { type: String, required: true },
+    url: { type: String, required: true },
   },
 });
 </script>
+<style scoped>
+.text-collection-components {
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  color: #36455a;
+}
+.collection-image {
+  width: 50px;
+  height: 50px;
+}
+</style>
