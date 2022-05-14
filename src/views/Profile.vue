@@ -4,7 +4,8 @@
       <header1></header1>
       <ion-row>
         <ion-col class="input-row">
-          <ion-input style="margin-top: 46px;"
+          <ion-input
+            style="margin-top: 46px"
             type="email"
             placeholder="email"
             class="custom-input"
@@ -14,11 +15,7 @@
       </ion-row>
       <ion-row>
         <ion-col class="input-row">
-          <ion-input
-            type="tel"
-            placeholder="tel"
-            class="custom-input"
-          >
+          <ion-input type="tel" placeholder="tel" class="custom-input">
           </ion-input>
         </ion-col>
       </ion-row>
@@ -40,7 +37,7 @@ import {
   IonAvatar,
   IonInput,
 } from "@ionic/vue";
-import Header1 from "../components/Header1.vue";
+import Header1 from "../components/Header.vue";
 
 export default defineComponent({
   name: "HomePage",
@@ -49,8 +46,8 @@ export default defineComponent({
     IonGrid,
     IonRow,
     IonCol,
-    Header1
-},
+    Header1,
+  },
 });
 </script>
 <style scoped>
