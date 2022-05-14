@@ -22,7 +22,6 @@
           </ion-input>
         </ion-col>
       </ion-row>
-
     </ion-grid>
   </base-page>
 </template>
@@ -38,6 +37,8 @@ import {
   IonGrid,
   IonRow,
   IonCol,
+  IonAvatar,
+  IonInput,
 } from "@ionic/vue";
 import Header1 from "../components/Header.vue";
 
@@ -78,14 +79,13 @@ export default defineComponent({
   margin-left: 20px;
   /* padding-right: auto; */
 }
-.avatar{
- min-height: 72px;
-  min-width: 72px;  
+.avatar {
+  min-height: 72px;
+  min-width: 72px;
   margin: auto;
-  margin-top: 32px;  
-  
+  margin-top: 32px;
 }
-.align-center{
+.align-center {
   text-align: center;
   margin: auto;
   margin-top: 12px;
