@@ -7,7 +7,7 @@
             <span class="user-title-text">Hello Awesome_69,</span>
             <br />
             <span class="small-text"
-              >Let's Discover Our Beautifull Planet Togheter</span
+              >Let's Discover Our Beautifull Planet together</span
             >
           </ion-text>
         </ion-col>
