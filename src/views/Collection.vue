@@ -27,7 +27,7 @@
           ><collection-card
             :name="'Daisy'"
             :date="'8.6.2022'"
-            :url="'https://www.thespruce.com/thmb/nXN4-57cybyk8U0lYRv8NEcXzjo=/4288x2412/smart/filters:no_upscale()/oxeye-daisy-growing-guide-5190951-hero-baed472653934a6da8c8f86237dcf7bc.jpg'"
+            :url="'https://c-pf.niceshops.com/upload/image/product/large/default/set-za-gojenje-planika-1-k-660538-sl.jpg'"
           >
           </collection-card>
         </ion-col>
