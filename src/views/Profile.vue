@@ -1,24 +1,12 @@
 <template>
   <base-page title="Profile">
-    <div class="green-box"></div>
-    <ion-grid fixed>      
-      <ion-row>
-        <ion-col size="12">
-         <ion-avatar class="avatar">
-            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-        </ion-avatar>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <h3 class="align-center">Name LastName</h3>
-        </ion-col>
-      </ion-row>
+    <ion-grid fixed>
+      <header1></header1>
       <ion-row>
         <ion-col class="input-row">
-          <ion-input
-            type="search"
-            placeholder="Search for plants"
+          <ion-input style="margin-top: 46px;"
+            type="email"
+            placeholder="email"
             class="custom-input"
           >
           </ion-input>
@@ -27,8 +15,8 @@
       <ion-row>
         <ion-col class="input-row">
           <ion-input
-            type="search"
-            placeholder="Search for plants"
+            type="tel"
+            placeholder="tel"
             class="custom-input"
           >
           </ion-input>
@@ -42,6 +30,7 @@
 <script lang="ts">
 import BasePage from "../components/BasePage.vue";
 import { defineComponent } from "vue";
+
 import {
   IonCard,
   IonCardHeader,
@@ -50,15 +39,17 @@ import {
   IonRow,
   IonCol,
 } from "@ionic/vue";
+import Header1 from "../components/Header.vue";
 
 export default defineComponent({
   name: "HomePage",
   components: {
-    BasePage,  
+    BasePage,
     IonGrid,
     IonRow,
     IonCol,
-  },
+    Header1
+},
 });
 </script>
 <style scoped>
