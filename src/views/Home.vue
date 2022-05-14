@@ -43,6 +43,7 @@
           <ion-slides>
             <ion-slide>
               <news-card
+                :img_url="'https://i0.wp.com/citymagazine.si/wp-content/uploads/2019/01/shutterstock_557542792.jpg?ssl=1'"
                 :title="'Rastlina dneva'"
                 :subtitle="'Zelena vrtnica'"
                 :content="'Zelo velika lepa zelena vrtnica'"
@@ -50,16 +51,18 @@
             </ion-slide>
             <ion-slide>
               <news-card
-                :title="'Rumena vrtnica'"
-                :subtitle="'Zelena vrtnica'"
-                :content="'Zelo velika lepa zelena vrtnica'"
+                :img_url="'https://www.openaccessgovernment.org/wp-content/uploads/2018/11/dreamstime_s_74844293.jpg'"
+                :title="'Okoljske zgodbe'"
+                :subtitle="'s terena'"
+                :content="'boj za čisto in zdravo okolje. Naše okoljske pravice in kako do njih.'"
               ></news-card>
             </ion-slide>
             <ion-slide>
               <news-card
-                :title="'Rumena vrtnica'"
-                :subtitle="'Zelena vrtnica'"
-                :content="'Zelo velika lepa zelena vrtnica'"
+                :img_url="'https://www.slo-foto.net/modules/Galerija/data/media/13/4125970397.jpg'"
+                :title="'Planika'"
+                :subtitle="'Najbolj iskano'"
+                :content="'Dvojne točke za najdbo.'"
               ></news-card>
             </ion-slide>
           </ion-slides>

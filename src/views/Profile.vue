@@ -40,7 +40,7 @@ import {
   IonAvatar,
   IonInput,
 } from "@ionic/vue";
-import Header1 from "../components/Header.vue";
+import Header1 from "../components/Header1.vue";
 
 export default defineComponent({
   name: "HomePage",
