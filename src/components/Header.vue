@@ -1,41 +1,32 @@
 <template>
-  <div class="green-box">     
-    </div>   
-      <ion-row class="ion-align-items-center">
-        <ion-col size="9" style="margin-left: 12px">
-          <ion-text color="light">
-            <span class="user-title-text">Hello Awesome_69,</span>
-            <br />
-            <span class="small-text"
-              >Let's Discover Our Beautifull Planet together</span
-            >
-          </ion-text>
-        </ion-col>
-        <ion-col size="auto">
-          <ion-avatar>
-            <img
-              src="https://www.t2transfer.com/wp-content/uploads/2021/10/83-836357_greg-ezeilo-avatar-icon-png.jpg"
-            />
-          </ion-avatar>
-        </ion-col>
-      </ion-row>
-      <div class="header-ends"></div>    
+  <div class="green-box"></div>
+  <ion-row class="ion-align-items-center">
+    <ion-col size="9" style="margin-left: 12px">
+      <ion-text color="light">
+        <span class="user-title-text">Hello Awesome_69,</span>
+        <br />
+        <span class="small-text"
+          ><slot>Let's Discover Our Beautifull Planet together</slot></span
+        >
+      </ion-text>
+    </ion-col>
+    <ion-col size="auto">
+      <ion-avatar>
+        <img
+          src="https://www.t2transfer.com/wp-content/uploads/2021/10/83-836357_greg-ezeilo-avatar-icon-png.jpg"
+        />
+      </ion-avatar>
+    </ion-col>
+  </ion-row>
+  <div class="header-ends"></div>
 </template>
 
-
-
-    
-
 <script lang="ts">
-
 import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "Tab1Page",
-  components: {
-    
-    
-  }, 
+  components: {},
 });
 </script>
 <style scoped>
@@ -80,7 +71,7 @@ export default defineComponent({
   /* padding-right: auto; */
 }
 
-.header-ends{
+.header-ends {
   margin-bottom: 48px;
 }
 </style>

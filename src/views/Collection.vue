@@ -1,7 +1,7 @@
 <template>
   <base-page title="Collection">
     <ion-grid fixed>
-      <header1></header1>
+      <header1>BRAVO! You Have Collected 235 plants</header1>
       <ion-row class="ion-justify-content-center" style="margin-top: 41px">
         <ion-col size="12">
           <h3 style="margin-left: 12px">Recent</h3>
