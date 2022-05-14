@@ -1,19 +1,8 @@
 <template>
   <base-page title="Home">
-    <div class="green-box">
-      <!-- <div style="margin-top: 50px">
-        
-      </div> -->
-    </div>
-
+    <div class="green-box"></div>
     <ion-grid fixed>
       <ion-row>
-        <ion-col size="12" style="margin-left: 12px">
-          <ion-text color="light"> <h2>Hello, Mr. Awsome_69</h2></ion-text>
-        </ion-col>
-        <ion-col size="12" style="margin-left: 12px">
-          <ion-text color="light"> <h4>Hello, Mr. Awsome_69</h4></ion-text>
-        </ion-col>
         <ion-col class="input-row">
           <ion-input
             type="search"
@@ -24,35 +13,32 @@
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col size="12" style="margin-left: 12px">
-          <h1>News</h1>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size="12" style="margin-bottom: 20px">
+        <ion-col size="12">
           <ion-slides>
             <ion-slide>
-              <news-card
-                :title="'Rastlina dneva'"
-                :subtitle="'Zelena vrtnica'"
-                :content="'Zelo velika lepa zelena vrtnica'"
-              ></news-card>
+              <h1>Slide 1</h1>
             </ion-slide>
             <ion-slide>
-              <news-card
-                :title="'Rumena vrtnica'"
-                :subtitle="'Zelena vrtnica'"
-                :content="'Zelo velika lepa zelena vrtnica'"
-              ></news-card>
+              <h1>Slide 2</h1>
             </ion-slide>
             <ion-slide>
-              <news-card
-                :title="'Rumena vrtnica'"
-                :subtitle="'Zelena vrtnica'"
-                :content="'Zelo velika lepa zelena vrtnica'"
-              ></news-card>
+              <h1>Slide 3</h1>
             </ion-slide>
           </ion-slides>
+          <ion-card>
+            <img
+              src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGxhbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"
+            />
+            <ion-card-header>
+              <ion-card-subtitle>Destination</ion-card-subtitle>
+              <ion-card-title>Madison, WI</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              Founded in 1829 on an isthmus between Lake Monona and Lake
+              Mendota, Madison was named the capital of the Wisconsin Territory
+              in 1836.
+            </ion-card-content>
+          </ion-card>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -64,27 +50,29 @@ import BasePage from "../components/BasePage.vue";
 import { defineComponent } from "vue";
 import {
   IonInput,
+  IonCard,
+  IonCardHeader,
+  IonCardSubtitle,
   IonGrid,
   IonRow,
   IonCol,
   IonSlides,
   IonSlide,
-  IonText,
 } from "@ionic/vue";
-import NewsCard from "../components/NewsCard.vue";
 
 export default defineComponent({
-  name: "HomePage",
+  name: "SearchPage",
   components: {
     BasePage,
     IonInput,
+    IonCard,
+    IonCardHeader,
+    IonCardSubtitle,
     IonGrid,
     IonRow,
     IonCol,
     IonSlides,
     IonSlide,
-    NewsCard,
-    IonText,
   },
 });
 </script>
