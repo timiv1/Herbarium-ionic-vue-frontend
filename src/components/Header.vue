@@ -18,7 +18,8 @@
             />
           </ion-avatar>
         </ion-col>
-      </ion-row>    
+      </ion-row>
+      <div class="header-ends"></div>    
 </template>
 
 
@@ -77,5 +78,9 @@ export default defineComponent({
 ::v-deep .native-input {
   margin-left: 20px;
   /* padding-right: auto; */
+}
+
+.header-ends{
+  margin-bottom: 48px;
 }
 </style>

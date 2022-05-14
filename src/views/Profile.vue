@@ -4,19 +4,12 @@
       <header1></header1>
       <ion-row>
         <ion-col class="input-row">
-          <ion-input
-            style="margin-top: 46px"
-            type="email"
-            placeholder="email"
-            class="custom-input"
-          >
-          </ion-input>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="input-row">
-          <ion-input type="tel" placeholder="tel" class="custom-input">
-          </ion-input>
+          <achievements class="achievement"
+          :img_url="'https://i0.wp.com/citymagazine.si/wp-content/uploads/2019/01/shutterstock_557542792.jpg?ssl=1'"
+                :title="'Rastlina dneva'"
+                :subtitle="'Zelena vrtnica'"
+                :content="'Zelo velika lepa zelena vrtnica'">
+          </achievements>           
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -25,6 +18,8 @@
 
 <script lang="ts">
 import BasePage from "../components/BasePage.vue";
+import Achievements from "../components/Achievements.vue";
+
 import { defineComponent } from "vue";
 
 import {
@@ -40,9 +35,10 @@ import {
 import Header1 from "../components/Header.vue";
 
 export default defineComponent({
-  name: "HomePage",
+  name: "ProfilePage",
   components: {
     BasePage,
+    Achievements,
     IonGrid,
     IonRow,
     IonCol,
@@ -82,9 +78,8 @@ export default defineComponent({
   margin: auto;
   margin-top: 32px;
 }
-.align-center {
-  text-align: center;
-  margin: auto;
-  margin-top: 12px;
+
+.achievement{
+  margin-top: 24px;
 }
 </style>
