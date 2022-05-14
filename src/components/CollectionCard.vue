@@ -1,10 +1,13 @@
 <template>
-  <div class="ion-text-center" style="margin-left: 10px; margin-right: 10px">
+  <ion-card class="collection-card">
     <img :src="url" />
-    <span class="text-collection-components" style="display: none"
-      >{{ name }} {{ date }}</span
-    >
-  </div>
+    <div class="text-box ion-text-center">
+      <span class="text-collection-components" style="">{{ name }}</span>
+    </div>
+  </ion-card>
+  <!-- <div class="ion-text-center" style="margin-left: 10px; margin-right: 10px"> -->
+
+  <!-- </div> -->
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
@@ -28,8 +31,16 @@ export default defineComponent({
 
   color: #36455a;
 }
+.collection-card {
+  margin: 3px;
+}
 .collection-image {
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+.text-box {
+  margin: 5px 5px 5px 5px;
 }
 </style>
