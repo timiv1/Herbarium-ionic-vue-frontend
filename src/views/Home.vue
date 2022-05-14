@@ -7,14 +7,24 @@
     </div>
 
     <ion-grid fixed>
-      <ion-row>
-        <ion-col size="12" style="margin-left: 12px">
-          <ion-text color="light"> <h2>Hello, Mr. Awsome_69</h2></ion-text>
+      <ion-row class="ion-align-items-center">
+        <ion-col size="9" style="margin-left: 12px">
+          <ion-text color="light">
+            <span class="user-title-text">Hello Awesome_69,</span>
+            <br />
+            <span class="small-text"
+              >Let's Discover Our Beautifull Planet Togheter</span
+            >
+          </ion-text>
         </ion-col>
-        <ion-col size="12" style="margin-left: 12px">
-          <ion-text color="light"> <h4>Hello, Mr. Awsome_69</h4></ion-text>
+        <ion-col size="auto">
+          <ion-avatar>
+            <img
+              src="https://www.t2transfer.com/wp-content/uploads/2021/10/83-836357_greg-ezeilo-avatar-icon-png.jpg"
+            />
+          </ion-avatar>
         </ion-col>
-        <ion-col class="input-row">
+        <ion-col size="12" class="input-row">
           <ion-input
             type="search"
             placeholder="Search for plants"
@@ -89,12 +99,27 @@ export default defineComponent({
 });
 </script>
 <style scoped>
+.small-text {
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  color: #ffffff;
+
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+.user-title-text {
+  font-size: 21px;
+  line-height: 25px;
+  color: #ffffff;
+}
 .custom-input {
   width: 80%;
   height: 50px;
   left: 10%;
   right: 10%;
-  margin-top: 91px;
+  margin-top: 11px;
 
   background: #ffffff;
   box-shadow: 3px 5px 20px rgba(182, 182, 182, 0.15);
