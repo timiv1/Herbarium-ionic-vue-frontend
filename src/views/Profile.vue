@@ -1,12 +1,14 @@
 <template>
   <base-page title="Profile">
     <div class="green-box"></div>
-    <ion-grid fixed>      
+    <ion-grid fixed>
       <ion-row>
         <ion-col size="12">
-         <ion-avatar class="avatar">
-            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-        </ion-avatar>
+          <ion-avatar class="avatar">
+            <img
+              src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
+            />
+          </ion-avatar>
         </ion-col>
       </ion-row>
       <ion-row>
@@ -34,7 +36,6 @@
           </ion-input>
         </ion-col>
       </ion-row>
-
     </ion-grid>
   </base-page>
 </template>
@@ -49,15 +50,19 @@ import {
   IonGrid,
   IonRow,
   IonCol,
+  IonAvatar,
+  IonInput,
 } from "@ionic/vue";
 
 export default defineComponent({
   name: "HomePage",
   components: {
-    BasePage,  
+    BasePage,
     IonGrid,
     IonRow,
     IonCol,
+    IonAvatar,
+    IonInput,
   },
 });
 </script>
@@ -87,14 +92,13 @@ export default defineComponent({
   margin-left: 20px;
   /* padding-right: auto; */
 }
-.avatar{
- min-height: 72px;
-  min-width: 72px;  
+.avatar {
+  min-height: 72px;
+  min-width: 72px;
   margin: auto;
-  margin-top: 32px;  
-  
+  margin-top: 32px;
 }
-.align-center{
+.align-center {
   text-align: center;
   margin: auto;
   margin-top: 12px;

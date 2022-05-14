@@ -1,5 +1,5 @@
 <template>
-  <ion-page>
+  <ion-page class="background-white">
     <ion-header>
       <ion-toolbar>
         <ion-title>{{ title }}</ion-title>
@@ -35,3 +35,8 @@ export default defineComponent({
   props: { title: { type: String, required: true } },
 });
 </script>
+<style>
+/* .background-white {
+  background-color: white;
+} */
+</style>
