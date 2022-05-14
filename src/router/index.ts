@@ -8,6 +8,10 @@ const routes: Array<RouteRecordRaw> = [
     redirect: '/home'
   },
   {
+    path: '/search',
+    component: () => import('@/views/Search.vue')
+  },
+  {
     path: '/',
     component: TabsPage,
     children: [
