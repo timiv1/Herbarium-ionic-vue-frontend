@@ -1,6 +1,6 @@
 <template>
   <ion-card>
-    <img
+    <img class="img-size"
       :src="img_url"
     />
     <ion-card-header>
@@ -31,3 +31,10 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+.img-size{
+  width: 446px;
+  height: 260px;
+}
+</style>

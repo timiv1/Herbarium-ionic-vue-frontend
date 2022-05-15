@@ -1,6 +1,6 @@
 <template>
   <ion-card class="collection-card">
-    <img :src="url" />
+    <img class="img-size" :src="url" />
     <div class="text-box ion-text-center">
       <span class="text-collection-components" style="">{{ name }}</span>
     </div>
@@ -42,5 +42,9 @@ export default defineComponent({
 }
 .text-box {
   margin: 5px 5px 5px 5px;
+}
+.img-size{
+  width: 142px;
+  height: 80px;
 }
 </style>
