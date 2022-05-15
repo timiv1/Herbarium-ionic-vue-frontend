@@ -1,57 +1,35 @@
 <template>
   <base-page title="Profile">
     <ion-grid fixed>
-      <header1></header1>      
-      <ion-row>
+      <header1></header1>  
+      <!-- <li v-for="(item, index) in items">
+  {{ parentMessage }} - {{ index }} - {{ item.message }} -->
+
+ <!-- <div
+    v-for="todo in achivements_list"
+    :key="todo.id"
+  />
+
+
+
+<div :v-for="(item, this.achivements_list) in items">
+
+</div>
+      <ion-row v-for="(item, this.achivements_list) in items"> > -->
+<div v-for="(item,i) in this.achivements_list" :key="i">
+  <ion-row>
         <ion-col class="input-row">
           <achievements class="achievement" 
-            :name= "'Plant of the day'"
-            :description="'You just scanned the special plant of the day!'"
-            :image="'https://img.icons8.com/bubbles/452/chili-pepper.png'"
-            :points="'10'">
+            :name= item.name 
+            :description= item.description 
+            :image= item.image 
+            :points=  item.points>
           </achievements>           
         </ion-col>
       </ion-row>
-      <ion-row>
-        <ion-col class="input-row">
-          <achievements class="achievement" 
-            :name= "'10th Plant Scanned'"
-            :description="'Achievement for 10th plant scanned'"
-            :image="'https://cdn-icons-png.flaticon.com/512/628/628283.png'"
-            :points="'10'">
-          </achievements>           
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="input-row">
-          <achievements class="achievement" 
-            :name= "'Happy birthday to you'"
-            :description="'The day is all yours — have fun!'"
-            :image="'https://img.icons8.com/bubbles/452/poppy-flower.png'"
-            :points="'5'">
-          </achievements>           
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="input-row">
-          <achievements class="achievement" 
-            :name= "'You are still active!'"
-            :description="'Returning to Herbarium for the past week improved your flower knowledge, didnt it?'"
-            :image="'https://img.icons8.com/bubbles/452/banana.png'"
-            :points="'5'">
-          </achievements>           
-        </ion-col>
-      </ion-row>
-    <ion-row>
-        <ion-col class="input-row">
-          <achievements class="achievement" 
-            :name= "'Rare one!'"
-            :description="'You have just hit the jackpot with this one!'"
-            :image="'https://img.icons8.com/bubbles/344/melon.png'"
-            :points="'20'">
-          </achievements>           
-        </ion-col>
-      </ion-row>     
+</div>
+     
+          
     </ion-grid>
   </base-page>
 </template>
@@ -77,6 +55,7 @@ import {
   IonInput,
 } from "@ionic/vue";
 import Header1 from "../components/Header.vue";
+import axios from 'axios';
 
 export default defineComponent({
   name: "ProfilePage",
@@ -88,6 +67,36 @@ export default defineComponent({
     IonCol,
     Header1,
   },
+  data() {
+    return { 
+       achivements_list: {}
+    };
+  },
+
+// http://88.200.36.115:8070/achievements/findAll
+// http://88.200.36.115:8070/achievements/findById/1
+// http://88.200.36.115:8070/collection/plant/1/user/1
+// http://88.200.36.115:8070/collection/upload
+// http://88.200.36.115:8070/collection/user/1
+// http://88.200.36.115:8070/leaderboards
+// http://88.200.36.115:8070/leaderboards/findAll
+// http://88.200.36.115:8070/leaderboards/findById/1
+
+
+  async ionViewDidEnter() {
+
+    axios
+      .get("http://88.200.36.115:8070/achievements/findAll") // Methods you can use also: .get , .put
+      .then((response) => {
+        console.log(response.data);
+        this.achivements_list = response.data
+        return response.data;
+      })     
+      .catch((error) => {
+        console.log("an error occurred");
+      });    
+ 
+}
  
 });
 </script>
