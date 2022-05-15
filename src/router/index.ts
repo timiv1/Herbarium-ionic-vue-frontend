@@ -12,6 +12,10 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/Search.vue')
   },
   {
+    path: '/plant',
+    component: () => import('@/views/Plant.vue')
+  },
+  {
     path: '/',
     component: TabsPage,
     children: [

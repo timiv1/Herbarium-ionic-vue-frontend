@@ -90,7 +90,9 @@ import {
   IonSlide,
   IonText,
 } from "@ionic/vue";
+import axios from "axios";
 import NewsCard from "../components/NewsCard.vue";
+// import axisoInstance from "../api/plantsAPi";
 export default defineComponent({
   name: "HomePage",
   components: {
@@ -108,6 +110,26 @@ export default defineComponent({
     return { map: Object() };
   },
   async ionViewDidEnter() {
+    //    return await new Promise((resolve, reject) => {
+    //   axios
+    //     .get(`/track/${id}/`)
+    //     .then((res) => resolve(res))
+    //     .catch((error) => reject(error))
+    // })
+
+    // console.log(axisoInstance.get(`/`));
+    //     .then((res) => resolve(res))
+    //     .catch((error) => reject(error)));
+
+    axios
+      .get("http://88.200.36.115:8070/leaderboards/findAll") // Methods you can use also: .get , .put
+      .then((response) => {
+        console.log(response.data);
+        return response.data;
+      })
+      .catch((error) => {
+        console.log("an error occurred");
+      });
     this.map = await this.setupMap();
     await this.addPoint();
   },
