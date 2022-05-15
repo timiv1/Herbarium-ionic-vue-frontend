@@ -12,6 +12,47 @@
           </achievements>           
         </ion-col>
       </ion-row>
+      <ion-row>
+        <ion-col class="input-row">
+          <achievements class="achievement" 
+            :name= "'10th Plant Scanned'"
+            :description="'Achievement for 10th plant scanned'"
+            :image="'https://cdn-icons-png.flaticon.com/512/628/628283.png'"
+            :points="'10'">
+          </achievements>           
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="input-row">
+          <achievements class="achievement" 
+            :name= "'10th Plant Scanned'"
+            :description="'Achievement for 10th plant scanned'"
+            :image="'https://cdn-icons-png.flaticon.com/512/628/628283.png'"
+            :points="'10'">
+          </achievements>           
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="input-row">
+          <achievements class="achievement" 
+            :name= "'10th Plant Scanned'"
+            :description="'Achievement for 10th plant scanned'"
+            :image="'https://cdn-icons-png.flaticon.com/512/628/628283.png'"
+            :points="'10'">
+          </achievements>           
+        </ion-col>
+      </ion-row>
+    <ion-row>
+        <ion-col class="input-row">
+          <achievements class="achievement" 
+            :name= "'10th Plant Scanned'"
+            :description="'Achievement for 10th plant scanned'"
+            :image="'https://cdn-icons-png.flaticon.com/512/628/628283.png'"
+            :points="'10'">
+          </achievements>           
+        </ion-col>
+      </ion-row>
+
     </ion-grid>
   </base-page>
 </template>
