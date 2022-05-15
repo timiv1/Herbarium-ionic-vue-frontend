@@ -68,11 +68,17 @@
           </ion-slides>
         </ion-col>
       </ion-row>
+      <ion-row>
+        <ion-col
+          ><capacitor-google-map id="map"></capacitor-google-map>
+        </ion-col>
+      </ion-row>
     </ion-grid>
   </base-page>
 </template>
 
 <script lang="ts">
+import { GoogleMap } from "@capacitor/google-maps";
 import BasePage from "../components/BasePage.vue";
 import { defineComponent } from "vue";
 import {
@@ -85,7 +91,6 @@ import {
   IonText,
 } from "@ionic/vue";
 import NewsCard from "../components/NewsCard.vue";
-
 export default defineComponent({
   name: "HomePage",
   components: {
@@ -99,6 +104,56 @@ export default defineComponent({
     NewsCard,
     IonText,
   },
+  data() {
+    return { map: Object() };
+  },
+  async ionViewDidEnter() {
+    this.map = await this.setupMap();
+    await this.addPoint();
+  },
+  methods: {
+    async setupMap() {
+      const apiKey = process.env.VUE_APP_MY_MAPS_API_KEY;
+      const mapElement = document.getElementById("map");
+      if (mapElement) {
+        const mapRef = document.getElementById("map") as HTMLElement;
+
+        console.log(mapRef);
+        const newMap = await GoogleMap.create({
+          id: "my-map", // Unique identifier for this map instance
+          element: mapRef, // reference to the capacitor-google-map element
+          apiKey: apiKey, // Your Google Maps API Key
+          config: {
+            center: {
+              // The initial position to be rendered by the map
+              lat: 33.6,
+              lng: -117.9,
+            },
+            zoom: 8, // The initial zoom level to be rendered by the map
+          },
+        });
+        return newMap;
+      }
+    },
+    async addPoint() {
+      const markerId = await this.map.addMarker({
+        coordinate: {
+          lat: 33.6,
+          lng: -117.9,
+        },
+      });
+
+      // Move the map programmatically
+      await this.map.setCamera({
+        coordinate: {
+          lat: 33.6,
+          lng: -117.9,
+        },
+      });
+    },
+  },
+
+  title: "Hello world",
 });
 </script>
 <style>
@@ -146,6 +201,11 @@ export default defineComponent({
   top: 0px;
 
   background: linear-gradient(107.16deg, #61d2c4 -9.45%, #29d890 85.23%);
+}
+capacitor-google-map {
+  display: inline-block;
+  width: 100%;
+  height: 400px;
 }
 ::v-deep .native-input {
   margin-left: 20px;
