@@ -4,11 +4,11 @@
       <header1></header1>
       <ion-row>
         <ion-col class="input-row">
-          <achievements class="achievement"
-          :img_url="'https://i0.wp.com/citymagazine.si/wp-content/uploads/2019/01/shutterstock_557542792.jpg?ssl=1'"
-                :title="'Rastlina dneva'"
-                :subtitle="'Zelena vrtnica'"
-                :content="'Zelo velika lepa zelena vrtnica'">
+          <achievements class="achievement" 
+            :name= "'10th Plant Scanned'"
+            :description="'Achievement for 10th plant scanned'"
+            :image="'https://cdn-icons-png.flaticon.com/512/628/628283.png'"
+            :points="'10'">
           </achievements>           
         </ion-col>
       </ion-row>
