@@ -4,7 +4,11 @@
     <div class="block_container" >
       <img class="icon_img block_container" :src="image" />
     <h2 class="content" style="margin: auto;">{{ name }}</h2>
-    <h3 class="content">{{ points }}</h3>
+    <div>
+ <h3 class="content">{{ points }} <img class="star-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/640px-Star_full.svg.png"/></h3>
+ 
+    </div>
+   
     
     </div>
 
@@ -46,6 +50,10 @@ export default defineComponent({
 }
 .content{
     margin: 24px;
+}
+.star-icon{
+    width: 16px;
+    height: 16px;
 }
 </style>
 
