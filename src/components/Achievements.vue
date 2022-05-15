@@ -26,8 +26,7 @@ import { IonCard, IonCardHeader, IonCardSubtitle } from "@ionic/vue";
 export default defineComponent({
   name: "AchivmentsComponent",
   components: {
-    IonCard,
-    
+    IonCard,   
   
   },
   props: {
