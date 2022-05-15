@@ -148,8 +148,8 @@ export default defineComponent({
           config: {
             center: {
               // The initial position to be rendered by the map
-              lat: 33.6,
-              lng: -117.9,
+              lat: 46.40589298093361,
+              lng: 14.152709680733068,
             },
             zoom: 8, // The initial zoom level to be rendered by the map
           },
@@ -158,20 +158,32 @@ export default defineComponent({
       }
     },
     async addPoint() {
-      const markerId = await this.map.addMarker({
+      await this.map.addMarker({
         coordinate: {
-          lat: 33.6,
-          lng: -117.9,
+          lat: 46.33070398892095,
+          lng: 13.834934062360947,
+        },
+      });
+      await this.map.addMarker({
+        coordinate: {
+          lat: 46.35642038819676,
+          lng: 13.821637053982808,
+        },
+      });
+      await this.map.addMarker({
+        coordinate: {
+          lat: 46.40589298093361,
+          lng: 14.152709680733068,
+        },
+      });
+      await this.map.addMarker({
+        coordinate: {
+          lat: 46.59616328178399,
+          lng: 15.608999349665345,
         },
       });
 
       // Move the map programmatically
-      await this.map.setCamera({
-        coordinate: {
-          lat: 33.6,
-          lng: -117.9,
-        },
-      });
     },
   },
 
