@@ -4,7 +4,7 @@
       <header1>BRAVO! You Have Collected 235 plants</header1>
       <ion-row class="ion-justify-content-center" style="margin-top: 41px">
         <ion-col size="12">
-          <h3 style="margin-left: 12px">Recent</h3>
+          <span class="title-page-news" style="margin-left: 12px">Recent</span>
         </ion-col>
 
         <ion-col size="4"
@@ -48,3 +48,12 @@ export default defineComponent({
   components: { BasePage, Header1, CollectionCard, IonGrid, IonRow, IonCol },
 });
 </script>
+<style>
+.title-page-news {
+  font-size: 27px;
+  line-height: 32px;
+  /* identical to box height */
+
+  color: #36455a;
+}
+</style>

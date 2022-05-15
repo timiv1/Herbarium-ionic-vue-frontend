@@ -11,11 +11,11 @@
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
-import {} from "@ionic/vue";
+import {IonCard} from "@ionic/vue";
 
 export default defineComponent({
   name: "PlantCard",
-  components: {},
+  components: {IonCard},
   props: {
     name: { type: String, required: true },
     date: { type: String, required: true },

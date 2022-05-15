@@ -23,10 +23,11 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { IonRow, IonCol, IonAvatar, IonText } from "@ionic/vue";
 
 export default defineComponent({
   name: "Tab1Page",
-  components: {},
+  components: { IonRow, IonCol, IonAvatar, IonText },
 });
 </script>
 <style scoped>

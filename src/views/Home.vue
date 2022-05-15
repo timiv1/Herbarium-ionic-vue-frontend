@@ -35,7 +35,7 @@
       </ion-row>
       <ion-row>
         <ion-col size="12" style="margin-left: 12px">
-          <h1>News</h1>
+          <span class="title-page-news">News</span>
         </ion-col>
       </ion-row>
       <ion-row>
@@ -101,6 +101,15 @@ export default defineComponent({
   },
 });
 </script>
+<style>
+.title-page-news {
+  font-size: 27px;
+  line-height: 32px;
+  /* identical to box height */
+
+  color: #36455a;
+}
+</style>
 <style scoped>
 .small-text {
   font-size: 14px;
